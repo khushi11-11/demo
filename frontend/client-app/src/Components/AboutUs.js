@@ -1,9 +1,13 @@
 import React from "react";
-
-function AboutUs(){
-    return(
+import Header from "./Header";
+import HomeSection from './HomeSection';
+function AboutUs() {
+    return (
         <div>
-            <h3>ABOUT US page</h3>
+            <Header/>
+            <HomeSection>
+                
+            </HomeSection>
         </div>
     )
 } export default AboutUs;

@@ -10,12 +10,22 @@ import DepartmentMgmt from './AdminView/DeptMgmt';
 import ProgramMgmt from './AdminView/ProgramMgmt';
 import MainPage from './Components/MainPage';
 import Feedback from './Forms/Feedback';
-
+import Header from './Components/Header';
+import HomeSection from './Components/HomeSection';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Feedback />
+    {/* <Feedback /> */}
     {/* <Register /> */}
+    {/* <MainPage/> */}
+    {/* <header/> */}
+    {/* <MainPage/> */}
+    {/* <Header/>
+    <HomeSection/> */}
+    <Home />
+
   </React.StrictMode>
 );
 

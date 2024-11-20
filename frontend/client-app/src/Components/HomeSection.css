@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero-sec {
+  display: flex;
+  width: 100%;
+  background-color: #fbf5ef;
+}
+.text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 65%;
+  background-color: #fff;
+  color: #000;
+  margin-top: 12px;
+  margin: 24px;
+  padding: 24px;
+  text-align: center;
+}
+.text-div h1 {
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: 30px;
+}
+.text-div p {
+  margin-top: -8px;
+  padding: 16px;
+}
+.right-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: auto;
+  margin-bottom: 60px;
+}
+.right-div a {
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+}
