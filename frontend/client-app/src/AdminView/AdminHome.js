@@ -19,33 +19,7 @@ function AdminHome(){
                 <h4>Admin Home Page</h4>
                 <DepartmentMgmt />
                 <ProgramMgmt />
-
-                {/* <nav>
-                    <ul>
-                        <li>
-                            <Link to="/statemgmt">State</Link>
-                        </li>
-                        <li>
-                            <Link to="/citymgmt">City</Link>
-                        </li>
-                        <li>
-                            <Link to="/productcatgmgmt">Product Category</Link>
-                        </li>
-                        <li>
-                            <Link to="/vendormgmt">Vendor Management</Link>
-                        </li>
-                        <li>
-                            <Link to="/product">Product Management</Link>
-                        </li>
-                    </ul>
-                </nav>
-                <Routes>
-                    <Route path="/statemgmt" element={<StateMgmt />}></Route>
-                    <Route path="/citymgmt" element={<CityMgmt />}></Route>
-                    <Route path="/productcatgmgmt" element={<ProductCatgMgmt />}></Route>
-                    <Route path="/vendormgmt" element={<VendorMgmt />}></Route>
-                    <Route path="/product" element={<Product />}></Route>
-                </Routes> */}
+        
                 <Outlet /> 
             </center>
         </div>
