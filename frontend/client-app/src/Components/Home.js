@@ -4,7 +4,7 @@ import HomeSection from './HomeSection';
 function Home() {
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             <HomeSection />
         </div>
     )

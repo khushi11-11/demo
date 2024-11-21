@@ -1,10 +1,12 @@
 import React from 'react'
 import "./HomeSection.css";
 import Navbar from './Navbar';
+import MainPage from './MainPage';
 function HomeSection() {
     return (
         <div className="hero-sec">
             <Navbar className="left-div" />
+            {/* <MainPage className="left-div"/> */}
             <div className="text-div">
                 <h1>DUAA-DEVI AHILYA UNIVERSITY ALUMNI ASSOCIATION</h1>
                 {/* <p>
