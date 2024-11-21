@@ -129,7 +129,7 @@ function Register(props){
 
     return(
         <div>
-            <h1>Alumni Registration Form</h1>
+            <h1>Alumni Registration</h1>
             <br />
             <table>
                 <tr>
