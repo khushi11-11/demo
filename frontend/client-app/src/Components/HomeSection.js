@@ -9,7 +9,7 @@ function HomeSection() {
             {/* <MainPage className="left-div"/> */}
             <div className="text-div">
                 <h1>DUAA-DEVI AHILYA UNIVERSITY ALUMNI ASSOCIATION</h1>
-                {/* <p>
+                <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
                     esse dolores suscipit magni cumque consectetur vero! Nam excepturi id
                     cumque quo nemo repellendus fugit praesentium iusto, vero quae aliquam
@@ -121,7 +121,7 @@ function HomeSection() {
                     deleniti eaque animi provident? Eaque, tempora! Quibusdam minima,
                     deserunt perspiciatis eveniet, vitae ratione ab sapiente obcaecati
                     tempore modi dolor laboriosam? Ipsum, aliquam?
-                </p> */}
+                </p>
             </div>
             <div className="right-div">
                 <p>

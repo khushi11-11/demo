@@ -13,11 +13,18 @@ import NewsRoom from "./NewsRoom";
 import PhotoGallery from "./PhotoGallery";
 import ContactUs from "./ContactUs";
 
+import Header from "./Header";
+import HomeSection from "./HomeSection";
+
 function MainPage(){
     return(
-        <div><center>
+        <div >
+            {/* <center> */}
+            <Header />
             <Router>
-                <nav>
+                <nav className="navbar">
+                <div className="navbar-content links" >
+                <div className="left-div">
                     <Link to="adminlogin">Admin</Link>
                     <span> </span><br />
                     <Link to="home">Home</Link>
@@ -34,7 +41,12 @@ function MainPage(){
                     <span> </span><br />
                     <Link to="contactus">Contact Us</Link>
                     <span> </span> <br />
+                    </div>
+                </div>
                 </nav>
+                <div>
+                    <HomeSection />
+                </div>
                 
                 <Routes>
                     {/* admin */}
@@ -54,7 +66,9 @@ function MainPage(){
 
                 </Routes>
             </Router>
-            </center>
+            
+            
+            {/* </center> */}
         </div>
     );
 } export default MainPage;

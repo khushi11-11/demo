@@ -17,7 +17,7 @@ import ContactUs from "./ContactUs";
 function Navbar() {
     return (
         <div>
-            <nav className="navbar">
+            <nav className="navbar"> 
                 <div className="navbar-content">
                     {/* <Router> */}
                         <nav>
