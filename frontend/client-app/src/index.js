@@ -22,8 +22,17 @@ import Test from './Components/test';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <React.StrictMode>
+    {/* <Feedback /> */}
+    {/* <Register /> */}
+    {/* <MainPage/> */}
+    {/* <header/> */}
+    {/* <MainPage/> */}
+    {/* <Header/>
+    <HomeSection/> */}
+    <Home />
 
-  <Test/>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
