@@ -1,9 +1,11 @@
 import React from "react";
-
-function Home(){
-    return(
+import Header from "./Header";
+import HomeSection from './HomeSection';
+function Home() {
+    return (
         <div>
-            <h3>HOME page</h3>
+            <Header />
+            <HomeSection />
         </div>
     )
 } export default Home;
