@@ -7,6 +7,7 @@
   display: flex;
   width: 100%;
   background-color: #fbf5ef;
+  justify-content: center;
 }
 .text-div {
   display: flex;
@@ -40,4 +41,7 @@
   font-size: 24px;
   font-weight: 400;
   text-decoration: underline;
+}
+.left-div{
+  width: 100px;
 }

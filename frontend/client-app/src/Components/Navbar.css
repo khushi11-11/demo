@@ -6,7 +6,7 @@
 }
 .navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: rgba(220, 179, 141, 0.66);
   min-width: 240px;
   min-height: 80vh;
