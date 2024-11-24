@@ -4,8 +4,8 @@ import HomeSection from './HomeSection';
 function Home() {
     return (
         <div>
-            <Header />
-            <HomeSection />
+            {/* <Header /> */}
+            {/* <HomeSection /> */}
         </div>
     )
 } export default Home;
