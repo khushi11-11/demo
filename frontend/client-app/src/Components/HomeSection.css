@@ -12,8 +12,9 @@
 .text-div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   width: 65%;
+  height: auto;
   background-color: #fff;
   color: #000;
   margin-top: 12px;
@@ -43,5 +44,5 @@
   text-decoration: underline;
 }
 .left-div{
-  width: 100px;
+  min-width: 250px;
 }

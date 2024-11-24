@@ -5,7 +5,7 @@ function Home() {
     return (
         <div>
             {/* <Header /> */}
-            <HomeSection />
+            {/* <HomeSection /> */}
         </div>
     )
 } export default Home;

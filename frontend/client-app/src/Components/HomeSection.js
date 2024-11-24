@@ -1,7 +1,5 @@
 import React from 'react'
 import "./HomeSection.css";
-import Navbar from './Navbar';
-import MainPage from './MainPage';
 function HomeSection() {
     return (
         <div className="hero-sec">

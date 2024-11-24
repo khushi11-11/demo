@@ -14,17 +14,28 @@ import Header from './Components/Header';
 import HomeSection from './Components/HomeSection';
 
 import Home from './Components/Home';
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, createBrowserRouter, Link, Route, RouterProvider, Routes } from "react-router-dom";
+import NavRoute from './Components/NavRoute';
 
 
-
+// const router = createBrowserRouter([
+//   {
+//     path:"/",
+//     element:(
+//       <div>
+//         <Header/>
+//         <HomeSection/>
+//       </div>
+//     )
+//   }
+// ])
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <MainPage />
-  </React.StrictMode>
+  // <RouterProvider router={router}/>
+  // <NavRoute/>
+  <MainPage />
 );
 
 // If you want to start measuring performance in your app, pass a function

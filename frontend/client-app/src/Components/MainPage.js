@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 // import "./index.css";
+import "./Navbar.css"
 import AdminLogin from "../AdminView/AdminLogin";
 import AdminHome from "../AdminView/AdminHome";
 import Home from "./Home";
@@ -15,29 +16,47 @@ import HomeSection from "./HomeSection";
 
 function MainPage() {
     return (
-        <div >
+        <div>
             {/* <center> */}
             <Header />
             <Router>
                 <nav className="navbar">
-                    <div className="navbar-content links" >
-                        <div className=" left-div">
-                            <Link to="adminlogin">Admin</Link>
-                            <span> </span><br />
-                            <Link to="home">Home</Link>
-                            <span> </span><br />
-                            <Link to="aboutus">About Us</Link>
-                            <span> </span> <br />
-                            <Link to="alumniachievers">Alumni Acheivers</Link>
-                            <span> </span><br />
-                            <Link to="getinvolved">Get Involved</Link>
-                            <span> </span> <br />
-                            <Link to="newsroom">News Room</Link>
-                            <span> </span> <br />
-                            <Link to="photogallery">Photo Gallery</Link>
-                            <span> </span><br />
-                            <Link to="contactus">Contact Us</Link>
-                            <span> </span> <br />
+                    <div>
+                        <div className="left-div">
+                            <ul className="links">
+                                <li>
+                                    <Link to="adminlogin" className="navlinks">Admin</Link>
+                                    <span> </span><br />
+                                </li>
+                                <li>
+                                    <Link to="home" className="navlinks">Home</Link>
+                                    <span> </span><br />
+                                </li>
+                                <li>
+                                    <Link to="aboutus" className="navlinks">About Us</Link>
+                                    <span> </span> <br />
+                                </li>
+                                <li>
+                                    <Link to="alumniachievers" className="navlinks">Alumni Acheivers</Link>
+                                    <span> </span><br />
+                                </li>
+                                <li>
+                                    <Link to="getinvolved" className="navlinks">Get Involved</Link>
+                                    <span> </span> <br />
+                                </li>
+                                <li>
+                                    <Link to="newsroom" className="navlinks">News Room</Link>
+                                    <span> </span> <br />
+                                </li>
+                                <li>
+                                    <Link to="photogallery" className="navlinks">Photo Gallery</Link>
+                                    <span> </span><br />
+                                </li>
+                                <li>
+                                    <Link to="contactus" className="navlinks">Contact Us</Link>
+                                    <span> </span> <br />
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div> <HomeSection /></div>
