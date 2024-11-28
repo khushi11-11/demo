@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 var Feedback = new Schema({
     emailid : {type:String},
-    aid : {type:Number},
+    afeedback_id : {type:Number},
     message : {type:String}
 }, {
     collection : 'Feedback'
