@@ -16,6 +16,7 @@ import HomeSection from './Components/HomeSection';
 import Home from './Components/Home';
 import { BrowserRouter, createBrowserRouter, Link, Route, RouterProvider, Routes } from "react-router-dom";
 import NavRoute from './Components/NavRoute';
+import MainPage_trial from './Components/MainPage_trial';
 
 
 // const router = createBrowserRouter([
@@ -35,7 +36,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <RouterProvider router={router}/>
   // <NavRoute/>
-  <MainPage />
+  // <MainPage />
+  <MainPage_trial/>
 );
 
 // If you want to start measuring performance in your app, pass a function

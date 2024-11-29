@@ -3,10 +3,8 @@ import "./HomeSection.css";
 function HomeSection() {
     return (
         <div className="hero-sec">
-            {/* <Navbar className="left-div" /> */}
-            {/* <MainPage className="left-div"/> */}
             <div className="text-div">
-                <h1>DUAA-DEVI AHILYA UNIVERSITY ALUMNI ASSOCIATION</h1>
+                {/* <h1>DUAA-DEVI AHILYA UNIVERSITY ALUMNI ASSOCIATION</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
                     esse dolores suscipit magni cumque consectetur vero! Nam excepturi id
@@ -119,7 +117,7 @@ function HomeSection() {
                     deleniti eaque animi provident? Eaque, tempora! Quibusdam minima,
                     deserunt perspiciatis eveniet, vitae ratione ab sapiente obcaecati
                     tempore modi dolor laboriosam? Ipsum, aliquam?
-                </p>
+                </p> */}
             </div>
             <div className="right-div">
                 <p>
