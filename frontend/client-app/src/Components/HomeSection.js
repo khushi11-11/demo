@@ -1,5 +1,7 @@
 import React from 'react'
 import "./HomeSection.css";
+import AboutUs from './AboutUs';
+import AdminLogin from '../AdminView/AdminLogin';
 function HomeSection() {
     return (
         <div className="hero-sec">
@@ -118,6 +120,7 @@ function HomeSection() {
                     deserunt perspiciatis eveniet, vitae ratione ab sapiente obcaecati
                     tempore modi dolor laboriosam? Ipsum, aliquam?
                 </p> */}
+                <AdminLogin />
             </div>
             <div className="right-div">
                 <p>
