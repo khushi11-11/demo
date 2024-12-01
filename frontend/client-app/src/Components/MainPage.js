@@ -59,23 +59,28 @@ function MainPage() {
                     </div>
                     <div> <HomeSection /></div>
                 </nav>
-                <Routes>
-                    {/* admin */}
-                    {/* <Route path="/adminmain" element={<AdminMain />}> */}
-                    <Route path="adminlogin" element={<AdminLogin />}>
-                        <Route path="adminhome" element={<AdminHome />} />
-                    </Route>
-                    {/* </Route>  */}
+                <div className="hero-sec ">
+                    <div className="text-div">
+                        <Routes>
+                            {/* admin */}
+                            {/* <Route path="/adminmain" element={<AdminMain />}> */}
+                            <Route path="adminlogin" element={<AdminLogin />}>
+                                <Route path="adminhome" element={<AdminHome />} />
+                            </Route>
+                            {/* </Route>  */}
 
-                    <Route path="home" element={<Home />} />
-                    <Route path="aboutus" element={<AboutUs />} />
-                    <Route path="alumniachievers" element={<AlumniAchievers />} />
-                    <Route path="getinvolved" element={<GetInvolved />} />
-                    <Route path="newsroom" element={<NewsRoom />} />
-                    <Route path="photogallery" element={<PhotoGallery />} />
-                    <Route path="contactus" element={<ContactUs />} />
+                            <Route path="home" element={<HomeSection />} />
+                            <Route path="aboutus" element={<AboutUs/>} />
+                            <Route path="alumniachievers" element={<AlumniAchievers />} />
+                            <Route path="getinvolved" element={<GetInvolved />} />
+                            <Route path="newsroom" element={<NewsRoom />} />
+                            <Route path="photogallery" element={<PhotoGallery />} />
+                            <Route path="contactus" element={<ContactUs />} />
 
-                </Routes>
+                        </Routes>
+                    </div>
+
+                </div>
             </Router>
         </div>
     );
