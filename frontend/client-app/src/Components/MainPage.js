@@ -79,11 +79,8 @@ function MainPage() {
 
                         </Routes>
                     </div>
-
                 </div>
             </Router>
         </div>
     );
 } export default MainPage;
-
-// useRef (just like ptr) k liye evt ni bnana pdega, Unlike useState() no variable or evt mgmt is required 

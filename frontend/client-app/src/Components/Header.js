@@ -1,51 +1,3 @@
-// import React from "react";
-// import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-// import davvLogo from "./davv-logo.svg";
-// import "./Header.css";
-// import AlumniRegister from "../Forms/AlumniRegister";
-// import AlumniLogin from "../Forms/AlumniLogin";
-
-// function Header() {
-//     return (
-//         <Router>
-//             <div>
-//                 <header className="header">
-//                     <div className="header-content">
-//                         <div className="logo-container">
-//                             <img
-//                                 src={davvLogo}
-//                                 alt="Devi Ahilya Vishwavidyalaya Logo"
-//                                 className="logo"
-//                             />
-//                         </div>
-//                         <div className="text-container">
-//                             <h1>DEVI AHILYA VISHWAVIDYALAYA, INDORE</h1>
-//                             <p className="secondary-text">
-//                                 (Formerly University of Indore) NAAC A+ accredited <br />
-//                                 State University of Madhya Pradesh, India
-//                             </p>
-//                         </div>
-//                         <div className="reg-login">
-//                             <Link to="/alumniregister">Register</Link>
-//                             <span> :: </span>
-//                             <Link to="/alumnilogin">Login</Link>
-//                         </div>
-//                     </div>
-//                 </header>
-
-//                 {/* Define Routes */}
-//                 <Routes>
-//                     <Route path="/alumniregister" element={<AlumniRegister />} />
-//                     <Route path="/alumnilogin" element={<AlumniLogin />} />
-//                 </Routes>
-//             </div>
-//         </Router>
-//     );
-// }
-
-// export default Header;
-
-
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import davvLogo from "./davv-logo.svg";
@@ -79,7 +31,7 @@ function Header() {
                                     <Link to="alumniregister">Register</Link>
                                     <span> :: </span>
                                     <Link to="alumnilogin">Login</Link>
-
+                                    
                                     <Routes>
                                         <Route path="alumniregister" element={<AlumniRegister />}>
                                             <Route path="mainpage" element={<MainPage />} />

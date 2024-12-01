@@ -120,7 +120,6 @@ function HomeSection() {
                     deserunt perspiciatis eveniet, vitae ratione ab sapiente obcaecati
                     tempore modi dolor laboriosam? Ipsum, aliquam?
                 </p> */}
-                <AdminLogin />
             </div>
             <div className="right-div">
                 <p>

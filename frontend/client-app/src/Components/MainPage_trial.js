@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import "./Navbar.css"
+import "./MainPage_trial.css";
 import AdminLogin from "../AdminView/AdminLogin";
 import AdminHome from "../AdminView/AdminHome";
 import Home from "./Home";
@@ -13,15 +13,13 @@ import ContactUs from "./ContactUs";
 import Header from "./Header";
 
 
-
-function MainPage_trial() {
+function MainPage() {
     return (
-        <div style={{ backgroundColor: "#d0e4c3", minHeight: "100vh", padding: "20px" }}>
+        <div>
             <Header />
             <Router>
-                <div style={{ display: "flex", position: "relative" }}>
-                    {/* Sidebar */}
-                    <nav className="navbar" style={{ width: "20%", backgroundColor: "#f4dfd0", padding: "10px" }}>
+                <div className="layout-container">
+                    <nav className="navbar">
                         <ul className="links">
                             <li>
                                 <Link to="/adminlogin" className="navlinks">Admin</Link>
@@ -50,29 +48,26 @@ function MainPage_trial() {
                         </ul>
                     </nav>
 
-                    {/* Central Content with Green Background */}
-                    <div style={{
-                        width: "80%",
-                        padding: "20px",
-                        backgroundColor: "#ffffff",
-                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                        borderRadius: "8px",
-                        marginLeft: "20px"
-                    }}>
+                    {/* Right Content Area */}
+                    <div className="content">
                         <Routes>
                             {/* Admin Routes */}
-                            <Route path="adminlogin" element={<AdminLogin />} />
-                            <Route path="adminhome" element={<AdminHome />} />
+                            <Route path="/adminlogin" element={<AdminLogin />} />
+                            <Route path="/adminhome" element={<AdminHome />} />
 
-                            {/* Other Routes */}
-                            <Route path="home" element={<Home />} />
-                            <Route path="aboutus" element={<AboutUs />} />
-                            <Route path="alumniachievers" element={<AlumniAchievers />} />
-                            <Route path="getinvolved" element={<GetInvolved />} />
-                            <Route path="newsroom" element={<NewsRoom />} />
-                            <Route path="photogallery" element={<PhotoGallery />} />
-                            <Route path="contactus" element={<ContactUs />} />
+                            {/* Main Page Routes */}
+                            <Route path="/home" element={<Home />} />
+                            <Route path="/aboutus" element={<AboutUs />} />
+                            <Route path="/alumniachievers" element={<AlumniAchievers />} />
+                            <Route path="/getinvolved" element={<GetInvolved />} />
+                            <Route path="/newsroom" element={<NewsRoom />} />
+                            <Route path="/photogallery" element={<PhotoGallery />} />
+                            <Route path="/contactus" element={<ContactUs />} />
+
+                            {/* Default Route */}
+                            <Route path="/" element={<Home />} />
                         </Routes>
+
                     </div>
                 </div>
             </Router>
@@ -80,4 +75,4 @@ function MainPage_trial() {
     );
 }
 
-export default MainPage_trial;
+export default MainPage;
