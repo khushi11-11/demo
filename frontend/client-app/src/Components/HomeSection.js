@@ -5,11 +5,9 @@ import AdminLogin from '../AdminView/AdminLogin';
 function HomeSection() {
     return (
         <div className="hero-sec">
-            {/* <Navbar className="left-div" /> */}
-            {/* <MainPage className="left-div"/> */}
             <div className="text-div">
-                {/* <h1>DUAA-DEVI AHILYA UNIVERSITY ALUMNI ASSOCIATION</h1> */}
-                {/* <p>
+                {/* <h1>DUAA-DEVI AHILYA UNIVERSITY ALUMNI ASSOCIATION</h1>
+                <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
                     esse dolores suscipit magni cumque consectetur vero! Nam excepturi id
                     cumque quo nemo repellendus fugit praesentium iusto, vero quae aliquam
