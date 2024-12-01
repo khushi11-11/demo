@@ -7,15 +7,11 @@ function FeedbackForm(){
     const[fid, setFid]=useState();
     const[email, setEmail]=useState();
     const[msg, setMsg]=useState();
+    const[feedbacklist, setFeedbacklist] = useState([]);
 
 
     useEffect(() => {
-        // axios.get('http://localhost:7777/feedback/getmaxfid').then((res) => {
-        //     setFid(res.data.length + 1);
-        // }).catch((err) => {
-        //     alert(err);
-        // });
-        axios.get('http://localhost:7777/feedback/getfeedbackcount/').then( (res)=>{
+        axios.get('http://localhost:7777/feedback/getmaxfid/').then( (res)=>{
             setFid(res.data.length+1);
         }).catch((err)=>{
             alert(err);
@@ -30,8 +26,20 @@ function FeedbackForm(){
     }
 
     const handleSubmit = (event) => {
+        var obj = {
+            feedback_id : fid,
+            emailid : email,
+            message : msg
+        }
         event.preventDefault();
+        axios.post('http://localhost:7777/feedback/feedbacksave/', obj).then( (res)=>{
+            alert(res.data);
+            setFeedbacklist(res.data);
+        }).catch((err)=>{
+            alert(err);
+        });
         alert('Thank you for your feedback!');
+
     };
 
     return(

@@ -1,6 +1,6 @@
 const express = require('express');
 const paymentdetailsRoute = express.Router();
-let PaymentDetails = require('./paymentdetails.model');
+let PaymentDetails = require('./payment.model');
 
 //save payment details
 paymentdetailsRoute.route('/paymentdetailsave').post( (req,res)=>{

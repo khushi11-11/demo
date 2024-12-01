@@ -37,10 +37,13 @@ function AlumniRegister(props){
         setAlumniName(evt.target.value);
     }
     const handleAdmYear=(evt)=>{
-        setAdmYear(evt.target.value);
+        const ayear = evt.target.value.slice(0, 4);
+        setAdmYear(ayear);
     }
     const handleGradYear=(evt)=>{
-        setGradYear(evt.target.value);
+        // Extract the year using string slicing
+        const gyear = evt.target.value.slice(0, 4);
+        setGradYear(gyear);
     }
     const handleAddress=(evt)=>{
         setAddress(evt.target.value);
@@ -75,13 +78,6 @@ function AlumniRegister(props){
 
     // for aid (Alumni ID)
     useEffect(() => {
-        // console.log(alist.apicname)
-        // axios.get('http://localhost:7777/alumni/getmaxaid').then((res) => {
-        //     setAId(res.data.length + 1);
-
-        // }).catch((err) => {
-        //     alert(err);
-        // });
         axios.get('http://localhost:7777/alumni/getalumnicount/').then( (res)=>{
             setAId(res.data.length+1);
         }).catch((err)=>{
@@ -125,8 +121,8 @@ function AlumniRegister(props){
             AlumniName : alumniname,
             ADepartment : adept,
             AProgram : aprg,
-            AAdmissionYear : admyear,
-            AGraduationYear : gradyear,
+            AAdmissionYear : admyear.slice(0, 4),
+            AGraduationYear : gradyear.slice(0, 4),
             AAddress : address,
             AContact : acontact,
             APicName : apicname,

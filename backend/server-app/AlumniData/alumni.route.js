@@ -106,17 +106,17 @@ alumniRoute.route('/getalumnicount').get( (req,res)=>{
 //     });
 // });
 
-// // get alumni list
-// alumniRoute.route('/getalumnilist').get( (req, res)=>{
-//     var id = req.params.aid;
-//     Alumni.find().then( alumni=>{
-//         console.log(alumni);
-//         res.send(alumni);
-//         res.end();
-//     }).catch( err=>{
-//         res.send("Something went wrong..");
-//         res.end();
-//     });
-// });
+// get alumni list
+alumniRoute.route('/getalumnilist').get( (req, res)=>{
+    var id = req.params.aid;
+    Alumni.find().then( alumni=>{
+        console.log(alumni);
+        res.send(alumni);
+        res.end();
+    }).catch( err=>{
+        res.send("Something went wrong..");
+        res.end();
+    });
+});
 
 module.exports = alumniRoute;
