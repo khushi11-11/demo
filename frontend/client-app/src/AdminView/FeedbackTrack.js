@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function FeedbackTrack(props){
+function FeedbackTrack(){
     const [feedbacklist, setFeedbacklist] = useState([]); //feedback list on display
 
     useEffect( ()=>{
@@ -15,7 +15,8 @@ function FeedbackTrack(props){
     return(
         <div>
             <center>
-            <h2>Feedback List</h2>
+                <br />
+            <h3>Feedback List</h3>
             <br />
                 <table>
                     <tr>

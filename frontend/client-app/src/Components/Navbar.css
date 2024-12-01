@@ -33,6 +33,11 @@
     font-size: 22px;
   }
 }
+.forms {
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .left-div li {
   margin-top: 16px;

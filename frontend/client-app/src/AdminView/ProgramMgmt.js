@@ -104,6 +104,7 @@ function ProgramMgmt(){
     return(
         <div>
             <center>
+            <br />
             <h3>Program Entry Form</h3>
             <table>
                     <tr>
@@ -146,7 +147,7 @@ function ProgramMgmt(){
                     </tr>
                 </table>
                 <br />
-                <h4>Program List</h4>
+                <h3>Program List</h3>
                 <table>
                     <tr>
                         <th>Program ID</th>

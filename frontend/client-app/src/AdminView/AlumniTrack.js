@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function AlumniTrack(props){
+function AlumniTrack(){
     const [alumnilist, setAlumnilist] = useState([]); //feedback list on display
 
     useEffect( ()=>{
@@ -15,7 +15,8 @@ function AlumniTrack(props){
     return(
         <div>
             <center>
-            <h2>Alumni List</h2>
+                <br />
+            <h3>Alumni List</h3>
             <br />
                 <table border={1}>
                     <tr>

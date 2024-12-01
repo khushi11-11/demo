@@ -91,10 +91,7 @@ function Bill(props){
             return;
         }
 
-        // var myamount = total*100;
-        // alert(total);
-
-
+        // var amount = 500;
         //new membership
         const result = await axios.post('http://localhost:7777/payment/membership/' + amount);
 
@@ -112,7 +109,7 @@ function Bill(props){
             name : "Devi Ahilya University Alumni Association (DUAA), Indore",
             description : "Test Transaction",
             image : { logo },
-            aid : aid,
+            mship_id : mship_id,
             
             // orderCreationId - membershipId, order_id - mship_id
             handler : async function (response) {
@@ -202,11 +199,6 @@ function Bill(props){
                         ))
                     }
                 </table>
-                {/* {
-                    props.data.selitems.map((item)=>{
-                        total=total+item.oprice;
-                    })
-                } */}
                 <h4 style={{backgroundColor:"green"}}>Total Amount = 500</h4>
                 <button type="submit" onClick={displayRazorpay}>Pay Now</button>
             </center>
