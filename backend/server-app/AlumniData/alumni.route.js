@@ -34,13 +34,13 @@ alumniRoute.route('/getmaxaid').get( function(req,res){
 
 // login
 alumniRoute.route('/login').post((req, res) => {
-    var id = req.body.AUserName;
-    var pass = req.body.AUserPass;
+    var id = req.body.AlumniId;
+    var pass = req.body.AlumniPass;
 
-    Alumni.findOne({ $and: [{ "AUserName": id }, { "AUserPass": pass }] })
-        .then(vendor => {
-            if (vendor) {
-                res.send(vendor);
+    Alumni.findOne({ $and: [{ "Aid": id }, { "AUserPass": pass }] })
+        .then(alumni => {
+            if (alumni) {
+                res.send(alumni);
             } else {
                 res.status(404).send("Invalid User ID or Password.");
             }

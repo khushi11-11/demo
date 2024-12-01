@@ -1,25 +1,27 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 
-function Register(props){
+function AlumniRegister(props){
     const[ausername, setAUserName]=useState(); // done 
     const[aemail, setAEmail]=useState(); // done
     const[auserpass, setAUserPass]=useState(); // done
     const[alumniname, setAlumniName]=useState(); // done
-    const[adept, setADept]=useState(); // partially done
-    const[aprg, setAPrg]=useState(); // partially done
+    const[adept, setADept]=useState(""); // partially done
+    const[aprg, setAPrg]=useState(""); // partially done
 
     const[deptlist, setDeptList]=useState([]); // dept mgmt
     const[prglist, setPrgList]=useState([]); // prg mgmt
     
-    const[admyear, setAdmYear]=useState([]); // partially done
-    const[gradyear, setGradYear]=useState([]); // partially done
+    const[admyear, setAdmYear]=useState(""); // partially done
+    const[gradyear, setGradYear]=useState(""); // partially done
+    const yearOptions = Array.from({ length: 2024 - 1985 + 1 }, (_, index) => 1985 + index);
+
     const[address, setAddress]=useState(); // done
     const[acontact, setAContact]=useState(); // done
     const[image, setImage] = useState({ preview: '', data: '' });
     const[apicname, setAPicName]=useState();
     const[status, setStatus] = useState('');
-    const[aid, setAId]=useState(); // done
+    const[aid, setAId]=useState(0); // done
     const[alist, setAList]=useState([]);
 
     const handleAUserName=(evt)=>{
@@ -59,7 +61,17 @@ function Register(props){
     const handleAPrgSelect=(evt)=>{
         setAPrg(evt.target.value);
     }
-    
+    useEffect(() => {
+        // Fetch department list on component mount
+        axios.get('http://localhost:7777/department/show')
+            .then((res) => {
+                setDeptList(res.data);
+            })
+            .catch((err) => {
+                console.error("Error fetching department list:", err);
+                alert("Failed to load department list.");
+            });
+    }, []);
 
     // for aid (Alumni ID)
     useEffect(() => {
@@ -70,7 +82,7 @@ function Register(props){
         // }).catch((err) => {
         //     alert(err);
         // });
-        axios.get('http://localhost:9122/alumni/getalumnicount/').then( (res)=>{
+        axios.get('http://localhost:7777/alumni/getalumnicount/').then( (res)=>{
             setAId(res.data.length+1);
         }).catch((err)=>{
             alert(err);
@@ -87,7 +99,8 @@ function Register(props){
             body : formData
         });
         if(response){
-            if(response.statusText=="ok"){
+            if(response.ok){
+                alert("File Uploaded Successfully !!");
                 setStatus("File Uploaded Successfully !!");
             } else{
                 setStatus("Failed to Upload File..");
@@ -128,7 +141,7 @@ function Register(props){
     }
 
     return(
-        <div>
+        <div><center>
             <h1>Alumni Registration</h1>
             <br />
             <table>
@@ -155,34 +168,69 @@ function Register(props){
                 <tr>
                     <td>Department : </td>
                     <td>
-                        <select onChange={handleADeptSelect}>
-                            {
-                                deptlist.map((item) => (
-                                    <option value={item.deptid}>{item.deptname}</option>
-                                ))
-                            }
+                    <select onChange={handleADeptSelect}>
+                            <option value="" disabled selected>
+                                Select Department
+                            </option>
+                            {deptlist.map((item) => (
+                                <option key={item.deptid} value={item.deptid}>
+                                    {item.deptname}
+                                </option>
+                            ))}
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>Program : </td>
                     <td>
-                        <select onClick={handleAPrgSelect}>
+                        {/* <select onClick={handleAPrgSelect}>
                             {
                                 prglist.map((items)=>(
                                     <option value={items.prgid}>{items.prgname}</option>
                                 ))
                             }
+                        </select> */}
+                        <select onChange={handleAPrgSelect}>
+                            <option value="" disabled selected>
+                                Select Program
+                            </option>
+                            {prglist.map((items) => (
+                                <option key={items.prgid} value={items.prgid}>
+                                    {items.prgname}
+                                </option>
+                                ))}
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>Admission Year : </td>
-                    <td></td>
+                    <td>
+                    <select id="graduationYear" value={admyear} onChange={handleAdmYear}>
+                        <option value="" disabled>
+                            Select
+                        </option>
+                            {yearOptions.map((year) => (
+                                <option key={year} value={year}>
+                                    {year}
+                                </option>
+                            ))}
+                    </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>Graduation Year : </td>
-                    <td></td>
+                    <td>
+                    <select id="graduationYear" value={gradyear} onChange={handleGradYear}>
+                        <option value="" disabled>
+                            Select
+                        </option>
+                            {yearOptions.map((year) => (
+                                <option key={year} value={year}>
+                                    {year}
+                                </option>
+                            ))}
+                    </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>Address: </td>
@@ -216,6 +264,6 @@ function Register(props){
                     </td>
                 </tr>
             </table>
-        </div>
+            </center></div>
     )
-} export default Register;
+} export default AlumniRegister;

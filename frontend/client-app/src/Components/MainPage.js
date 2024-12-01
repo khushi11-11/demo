@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-// import "./index.css";
 import "./Navbar.css"
 import AdminLogin from "../AdminView/AdminLogin";
 import AdminHome from "../AdminView/AdminHome";
@@ -17,7 +16,6 @@ import HomeSection from "./HomeSection";
 function MainPage() {
     return (
         <div>
-            {/* <center> */}
             <Header />
             <Router>
                 <nav className="navbar">
@@ -79,9 +77,6 @@ function MainPage() {
 
                 </Routes>
             </Router>
-
-
-            {/* </center> */}
         </div>
     );
 } export default MainPage;

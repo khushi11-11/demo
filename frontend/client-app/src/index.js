@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import AdminLogin from './AdminView/AdminLogin';
-import Register from './Forms/Register';
+import Register from './Forms/AlumniRegister';
 import DepartmentMgmt from './AdminView/DeptMgmt';
 import ProgramMgmt from './AdminView/ProgramMgmt';
 import MainPage from './Components/MainPage';
@@ -16,8 +16,11 @@ import HomeSection from './Components/HomeSection';
 import Home from './Components/Home';
 import { BrowserRouter, createBrowserRouter, Link, Route, RouterProvider, Routes } from "react-router-dom";
 import NavRoute from './Components/NavRoute';
-import RegistrationForm from './demoReg';
+// import RegistrationForm from './demoReg';
 import AdminHome from './AdminView/AdminHome';
+import Bill from './AlumniView/Bill';
+import AlumniLogin from './Forms/AlumniLogin';
+import AlumniRegister from './Forms/AlumniRegister';
 
 
 // const router = createBrowserRouter([
@@ -37,7 +40,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <RouterProvider router={router}/>
   // <NavRoute/>
-  <AdminLogin />
+  <MainPage />
 );
 
 // If you want to start measuring performance in your app, pass a function
