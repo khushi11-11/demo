@@ -8,17 +8,17 @@ import Register from './Forms/AlumniRegister';
 import DepartmentMgmt from './AdminView/DeptMgmt';
 import ProgramMgmt from './AdminView/ProgramMgmt';
 import MainPage from './Components/MainPage';
-import Feedback from './Forms/Feedback';
+import Feedback from './Forms/FeedbackForm';
 import Header from './Components/Header';
 import HomeSection from './Components/HomeSection';
 import Home from './Components/Home';
 import NavRoute from './Components/NavRoute';
 import MainPage_trial from './Components/MainPage_trial';
-// import RegistrationForm from './demoReg';
 import AdminHome from './AdminView/AdminHome';
 import Bill from './AlumniView/Bill';
 import AlumniLogin from './Forms/AlumniLogin';
 import AlumniRegister from './Forms/AlumniRegister';
+
 // const router = createBrowserRouter([
 //   {
 //     path:"/",
@@ -31,12 +31,23 @@ import AlumniRegister from './Forms/AlumniRegister';
 //   }
 // ])
 
+import FeedbackForm from './Forms/FeedbackForm';
+import FeedbackTrack from './AdminView/FeedbackTrack';
+import AlumniTrack from './AdminView/AlumniTrack';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   // <NavRoute/>
   // <MainPage />
   // <MainPage_trial />
+
+  // <BrowserRouter>
+  <AdminLogin />
+  // </BrowserRouter>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

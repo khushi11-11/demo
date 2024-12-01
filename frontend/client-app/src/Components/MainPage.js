@@ -57,12 +57,12 @@ function MainPage() {
                             </ul>
                         </div>
                     </div>
-                    <div> <HomeSection /></div>
+                    <div> <HomeSection /> </div>
                 </nav>
                 <div className="hero-sec ">
                     <div className="text-div">
                         <Routes>
-                            {/* admin */}
+                            
                             {/* <Route path="/adminmain" element={<AdminMain />}> */}
                             <Route path="adminlogin" element={<AdminLogin />}>
                                 <Route path="adminhome" element={<AdminHome />} />

@@ -145,6 +145,7 @@ function ProgramMgmt(){
                     <td><button type="submit" onClick={handleDeleteButton}>Delete</button></td>
                     </tr>
                 </table>
+                <br />
                 <h4>Program List</h4>
                 <table>
                     <tr>

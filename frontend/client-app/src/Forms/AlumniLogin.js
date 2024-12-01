@@ -84,7 +84,7 @@ function AlumniLogin() {
                         </tr>
                         <tr>
                             <td>Password: </td>
-                            <td><input type="text" onChange={handleAPass} value={apass} /></td>
+                            <td><input type="password" onChange={handleAPass} value={apass} /></td>
                         </tr>
                         <tr>
                             <td></td>
