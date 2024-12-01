@@ -63,7 +63,7 @@ function MainPage() {
                             <Route path="/newsroom" element={<NewsRoom />} />
                             <Route path="/photogallery" element={<PhotoGallery />} />
                             <Route path="/contactus" element={<ContactUs />} />
-
+                            
                             {/* Default Route */}
                             <Route path="/" element={<Home />} />
                         </Routes>
