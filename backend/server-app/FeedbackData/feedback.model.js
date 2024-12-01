@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 var Feedback = new Schema({
+    feedback_id : {type:Number},
     emailid : {type:String},
-    afeedback_id : {type:Number},
     message : {type:String}
 }, {
     collection : 'Feedback'

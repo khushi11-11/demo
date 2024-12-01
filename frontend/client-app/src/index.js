@@ -9,7 +9,7 @@ import Register from './Forms/AlumniRegister';
 import DepartmentMgmt from './AdminView/DeptMgmt';
 import ProgramMgmt from './AdminView/ProgramMgmt';
 import MainPage from './Components/MainPage';
-import Feedback from './Forms/Feedback';
+import Feedback from './Forms/FeedbackForm';
 import Header from './Components/Header';
 import HomeSection from './Components/HomeSection';
 
