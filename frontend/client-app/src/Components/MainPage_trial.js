@@ -17,7 +17,7 @@ import NewsRoom from "./NewsRoom";
 import PhotoGallery from "./PhotoGallery";
 import ContactUs from "./ContactUs";
 import Header from "./Header";
-
+import logo from "./davv-logo.svg";
 import FeedbackForm from "../Forms/FeedbackForm";
 import AlumniLogin from "../Forms/AlumniLogin";
 import AlumniRegister from "../Forms/AlumniRegister";

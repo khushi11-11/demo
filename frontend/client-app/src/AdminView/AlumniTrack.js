@@ -3,6 +3,11 @@ import axios from "axios";
 
 function AlumniTrack(){
     const [alumnilist, setAlumnilist] = useState([]); //feedback list on display
+    const [dept, setDept]=useState();
+    const [prg, setPrg]=useState();
+    const[deptlist, setDeptList]=useState([]); // dept mgmt
+    const[prglist, setPrgList]=useState([]); // prg mgmt
+
 
     useEffect( ()=>{
         axios.get("http://localhost:7777/alumni/getalumnilist").then( (res)=>{
@@ -12,12 +17,80 @@ function AlumniTrack(){
         });
     }, []);
 
+    // list
+    // const handleADeptSelect=(evt)=>{
+    //     setADept(evt.target.value);
+
+    //     // department k according program list display krne k liye
+    //     axios.get('http://localhost:7777/program/getprogrambydeptid/' + evt.target.value).then((res)=>{
+    //         setPrgList(res.data);
+    //     }).catch((err)=>{
+    //         alert(err);
+    //     });
+    // }
+    // const handleAPrgSelect=(evt)=>{
+    //     setAPrg(evt.target.value);
+    // }
+
+    // search buttons
+    // const handleSearchByDept=(evt)=>{
+    //     if(evt.target.value>0){
+    //         axios.get("http://localhost:7777/alumni/getalumnidetailsbydeptid/" + evt.target.value).then( (res)=>{
+    //             setAlumnilist(res.data);
+    //         }).catch( (err)=>{
+    //             alert(err);
+    //         });
+    //     } 
+    // }
+    // const handleSearchByPrg=(evt)=>{
+    //     if(evt.target.value>0){
+    //         axios.get("http://localhost:7777/alumni/getalumnidetailsbyprgid/").then( (res)=>{
+    //             setAlumnilist(res.data);
+    //         }).catch( (err)=>{
+    //             alert(err);
+    //         });
+    //     } 
+    // }
+
     return(
         <div>
             <center>
                 <br />
             <h3>Alumni List</h3>
             <br />
+            {/* <table>
+                <h2>Search Alumni Details By~</h2>
+                <tr>
+                    <td>Department</td>
+                    <td>
+                        <select onChange={handleADeptSelect}>
+                            <option value="" disabled selected>
+                                Select Department
+                            </option>
+                            {deptlist.map((item) => (
+                                <option key={item.deptid} value={item.deptid}>
+                                    {item.deptname}
+                                </option>
+                            ))}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Program</td>
+                    <td>
+                        <select onChange={handleAPrgSelect}>
+                            <option value="" disabled selected>
+                                Select Program
+                            </option>
+                            {prglist.map((items) => (
+                                <option key={items.prgid} value={items.prgid}>
+                                    {items.prgname}
+                                </option>
+                                ))}
+                        </select>
+                    </td>
+                </tr>
+            </table> */}
                 <table border={1}>
                     <tr>
                         <th> Alumni ID </th>

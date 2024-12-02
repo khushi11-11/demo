@@ -93,18 +93,30 @@ alumniRoute.route('/getalumnicount').get( (req,res)=>{
     });
 });
 
-// // get alumni details by aid
-// customerRoute.route('/getcustomerdetails/:cid').get( (req, res)=>{
-//     var id = req.params.cid;
-//     Customer.findOne({"Cid":id}).then( customer=>{
-//         console.log(customer);
-//         res.send(customer);
-//         res.end();
-//     }).catch( err=>{
-//         res.send("Something went wrong..");
-//         res.end();
-//     });
-// });
+// get alumni details by deptid
+alumniRoute.route('/getalumnidetailsbydept/:deptid').get( (req, res)=>{
+    var id = req.params.deptid;
+    Alumni.findMany({"deptid":id}).then( alumni=>{
+        console.log(alumni);
+        res.send(alumni);
+        res.end();
+    }).catch( err=>{
+        res.send("Something went wrong..");
+        res.end();
+    });
+});
+// get alumni details by prgid
+alumniRoute.route('/getalumnidetailsbyprg/:prgid').get( (req, res)=>{
+    var id = req.params.prgid;
+    Alumni.findMany({"prgid":id}).then( alumni=>{
+        console.log(alumni);
+        res.send(alumni);
+        res.end();
+    }).catch( err=>{
+        res.send("Something went wrong..");
+        res.end();
+    });
+});
 
 // get alumni list
 alumniRoute.route('/getalumnilist').get( (req, res)=>{
