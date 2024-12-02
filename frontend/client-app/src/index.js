@@ -21,9 +21,6 @@ import AlumniRegister from './Forms/AlumniRegister';
 import FeedbackForm from './Forms/FeedbackForm';
 import FeedbackTrack from './AdminView/FeedbackTrack';
 import AlumniTrack from './AdminView/AlumniTrack';
-import Carousel from './Components/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 
@@ -32,7 +29,7 @@ root.render(
 
   // <NavRoute/>
   // <MainPage />
-  // <MainPage_trial />
+  <MainPage_trial />
   // <BrowserRouter>
   // <AdminLogin />
   // <Home/>
