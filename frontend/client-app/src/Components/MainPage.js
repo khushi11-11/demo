@@ -12,6 +12,8 @@ import PhotoGallery from "./PhotoGallery";
 import ContactUs from "./ContactUs";
 import Header from "./Header";
 import HomeSection from "./HomeSection";
+import AlumniLogin from "../Forms/AlumniLogin";
+import AlumniRegister from "../Forms/AlumniRegister";
 
 function MainPage() {
     return (
@@ -57,8 +59,11 @@ function MainPage() {
                             </ul>
                         </div>
                     </div>
-                    <div> <HomeSection /> </div>
+                    <div>
+                        <HomeSection />
+                    </div>
                 </nav>
+                {/* <div> <HomeSection > */}
                 <div className="hero-sec ">
                     <div className="text-div">
                         <Routes>
@@ -77,10 +82,15 @@ function MainPage() {
                             <Route path="photogallery" element={<PhotoGallery />} />
                             <Route path="contactus" element={<ContactUs />} />
 
+                            
+
                         </Routes>
                     </div>
                 </div>
+                {/* </HomeSection> </div> */}
+               
             </Router>
+            
         </div>
     );
 } export default MainPage;

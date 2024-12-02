@@ -80,6 +80,7 @@ function DepartmentMgmt(){
     return(
         <div>
             <center>
+            <br />
                 <h3>Department Entry Form</h3>
                 <table>
                     <tr>
@@ -101,7 +102,7 @@ function DepartmentMgmt(){
                     </tr>
                 </table>
                 <br />
-                <h4>Department List</h4>
+                <h3>Department List</h3>
                 <table>
                     <tr>
                         <th>Department ID</th>
