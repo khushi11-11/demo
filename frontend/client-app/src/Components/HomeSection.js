@@ -128,7 +128,6 @@ function HomeSection(props) {
                     tempore modi dolor laboriosam? Ipsum, aliquam?
                 </p> */}
                 <h1>DUAA-DEVI AHILYA UNIVERSITY ALUMNI ASSOCIATION</h1>
-// <<<<<<< main
 //                 <p> tempore modi dolor laboriosam? Ipsum, aliquam?
 //                 </p>
 //                 {/* <AdminLogin /> */}
@@ -141,18 +140,18 @@ function HomeSection(props) {
 //                 <p>
 //                     <a href="#">FeedBack</a>
 //                 </p>
-// =======
-    
+//
+
 //                 <p> tempore modi dolor laboriosam? Ipsum, aliquam?</p>
 //             </div>
 //             <div className="right-div">
-                
+
 //                 <Link to="feedbackfrom">FeedBack</Link>
 //                 {/* <Routes>
 //                     <Route path='feedbackfrom' element={<FeedbackForm />}></Route>
 //                 </Routes> */}
 //                 <Outlet />
-// >>>>>>> main
+
             </div>
         </div >
     )
