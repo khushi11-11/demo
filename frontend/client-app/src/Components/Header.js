@@ -4,7 +4,7 @@ import davvLogo from "./davv-logo.svg";
 import "./Header.css";
 import AlumniRegister from "../Forms/AlumniRegister";
 import AlumniLogin from "../Forms/AlumniLogin";
-
+import MainPage from "./MainPage";
 function Header() {
     return (
         <div>
@@ -25,14 +25,23 @@ function Header() {
                                 State University of Madhya Pradesh, India
                             </p>
                             <div className="reg-login">
-// <<<<<<< main
-//                             {/* <a className="reg-login" href="#"> */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    );
+};
+export default Header;
 
-//                                 <Router>
+
+{/* <a className="reg-login" href="#"> */ }
+{/* //                                 <Router>
 //                                     <Link to="alumniregister">Register</Link>
 //                                     <span> :: </span>
 //                                     <Link to="alumnilogin">Login</Link>
-                                    
+
 //                                     <Routes>
 //                                         <Route path="alumniregister" element={<AlumniRegister />}>
 //                                             <Route path="mainpage" element={<MainPage />} />
@@ -40,28 +49,18 @@ function Header() {
 //                                         <Route path="alumnilogin" element={<AlumniLogin />}></Route>
 //                                     </Routes>
 //                                 </Router>
-//                                 {/* Register::Login */}
-                            
-//                             {/* </a> */}
-// =======
-                                
-//                             <Router>
-//                 {/* <Link to="alumniregister">Register</Link>
+//                                 Register::Login */}
+
+{/* </a> */ }
+{/*                              <Router> */ }
+{/* <Link to="alumniregister">Register</Link>
 //                 <span>   </span>::<span>   </span>
 //                 <Link to="alumnilogin">Login</Link> */}
-                
-//                 {/* <Routes>
+
+{/* <Routes>
 //                     <Route path="alumniregister" element={<AlumniRegister />} />
 //                     <Route path="alumnilogin" element={<AlumniLogin />} />
 //                 </Routes> */}
-//             </Router>
+{/* //             </Router> */ }
 
-// >>>>>>> main
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>            
-        </div>
-    )
-} export default Header;
+

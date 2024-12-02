@@ -98,12 +98,48 @@ p {
 }
 
 .feature-card img {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
   margin-bottom: 20px;
 }
 
 .message {
   background-color: #9d7f1b;
   height: 300px;
+  color: #fff;
+  display: flex;
+  border-radius: 12px;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.message h3,
+p {
+  color: inherit;
+}
+.img {
+  display: flex;
+  width: 50%;
+}
+.img img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  margin-left: 45px;
+}
+.text h2 {
+  font-size: 20px;
+}
+.text p {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.85;
+}
+.text h3 {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.85;
 }
