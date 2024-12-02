@@ -7,7 +7,7 @@ const Razorpay = require("razorpay");
 const router = express.Router();
 
 router.post("/membership/:amt", async (req, res) => {
-    console.log("Amount="+req.params.amt)
+    // console.log("Amount="+req.params.amt)
     try {
         const instance = new Razorpay({
             key_id: process.env.RAZORPAY_KEY_ID ,
@@ -16,7 +16,6 @@ router.post("/membership/:amt", async (req, res) => {
 
         // const amountInPaise = req.params.amt * 100; // Convert to paise
         const options = {
-            // amount: amountInPaise,
             amount : req.params.amt,
             currency: "INR",
             receipt: "receipt_order_74394"

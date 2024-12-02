@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import Header from "../Components/Header";
+import HomeSection from "../Components/HomeSection";
 
 function AlumniRegister(props){
     const[ausername, setAUserName]=useState(); // done 
@@ -103,7 +105,7 @@ function AlumniRegister(props){
             }
         }
     }
-
+ 
     const handleFileChange=(evt)=>{
         const img = {
             preview : URL.createObjectURL(evt.target.files[0]),
@@ -138,6 +140,8 @@ function AlumniRegister(props){
 
     return(
         <div><center>
+            {/* <Header /> */}
+            {/* <HomeSection> */}
             <h1>Alumni Registration</h1>
             <br />
             <table>
@@ -179,13 +183,6 @@ function AlumniRegister(props){
                 <tr>
                     <td>Program : </td>
                     <td>
-                        {/* <select onClick={handleAPrgSelect}>
-                            {
-                                prglist.map((items)=>(
-                                    <option value={items.prgid}>{items.prgname}</option>
-                                ))
-                            }
-                        </select> */}
                         <select onChange={handleAPrgSelect}>
                             <option value="" disabled selected>
                                 Select Program
@@ -239,8 +236,6 @@ function AlumniRegister(props){
                 <tr>
                     <td>Select Your Recent Photo: </td>
                     <td>
-                        {/* <input type="file" onChange={handleFileChange} name="file" />
-                        <img src={image.preview} width={100} height={100} /> */}
                         <input type="file" onChange={handleFileChange} name="file" />
                         {
                             image.preview && <img src={image.preview} alt="Preview" width={100} height={100} />
@@ -260,6 +255,9 @@ function AlumniRegister(props){
                     </td>
                 </tr>
             </table>
-            </center></div>
+            {/* </HomeSection> */}
+
+            </center>
+            </div>
     )
 } export default AlumniRegister;

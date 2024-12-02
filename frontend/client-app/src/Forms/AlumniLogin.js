@@ -1,10 +1,12 @@
 import axios from "axios";
 import Cookies from 'js-cookie';
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Link, Route, Routes, Outlet } from "react-router-dom";
 import ReactDOM from "react-dom/client"; 
 import Bill from "../AlumniView/Bill";
 import MainPage from "../Components/MainPage";
 import GetInvolved from "../Components/GetInvolved";
+import AlumniRegister from "./AlumniRegister";
 
 function AlumniLogin() {
     const [aid, setAId] = useState("");
@@ -33,8 +35,7 @@ function AlumniLogin() {
             AlumniPass: apass
         };
         axios.post('http://localhost:7777/alumni/login', obj).then((res) => {
-            // if (res.data.AlumniId !== undefined) {
-                if (res.data && res.data.Aid) {
+            if (res.data && res.data.Aid) {
             // obj ka rhs
                 // Cookies handling
                 if (ischecked) {
@@ -42,15 +43,7 @@ function AlumniLogin() {
                         ID: aid,
                         Passwd: apass
                     };
-                    // const expirationTime = new Date(new Date().getTime() + 60000000);
-                    // Cookies.set('aauth', JSON.stringify(alumniData), { expires: expirationTime });
                 }
-
-                // Session handling 
-                // const alumniSessionData = {
-                //     alumniname: res.data.AlumniName
-                // };
-                // sessionStorage.setItem('asessionauth', JSON.stringify(alumniSessionData));
 
 
                 // Render Bill
@@ -96,9 +89,14 @@ function AlumniLogin() {
                         </tr>
                     </tbody>
                 </table>
+                {/* <hr style={{width: '60%',height: '2px',border: 'none',backgroundColor: '#D9D9D9',margin: '20px auto',}} />
+
+                <p>Haven't registered yet? Register today here!<span> </span>
+                    <button type="submit" onClick={()=>AlumniRegister(true)}>Register</button>
+                    {AlumniRegister && <AlumniRegister />}
+                </p> */}
             </center>
         </div>
     );
 } export default AlumniLogin;
-
 

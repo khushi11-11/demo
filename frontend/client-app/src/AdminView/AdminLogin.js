@@ -1,27 +1,23 @@
+
+
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
-import AdminHome from "./AdminHome";
+import { Outlet, useNavigate } from "react-router-dom";
 
 function AdminLogin() {
     const [uid, setUId] = useState("");
     const [upass, setUPass] = useState("");
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // New state to track login status
+    const navigate = useNavigate(); // Hook for navigation
 
-    const handleUIdText = (evt) => {
-        setUId(evt.target.value);
-    }
-
-    const handleUPassText = (evt) => {
-        setUPass(evt.target.value);
-    }
+    const handleUIdText = (evt) => setUId(evt.target.value);
+    const handleUPassText = (evt) => setUPass(evt.target.value);
 
     const handleLoginButton = () => {
         if (uid === "admin" && upass === "abc@123") {
-            setIsLoggedIn(true); // Set login status to true
+            navigate("adminhome"); // Navigate to "adminhome" relative to "adminlogin"
         } else {
-            alert("INVALID ID OR PASSWORD !");
+            alert("INVALID ID OR PASSWORD!");
         }
-    }
+    };
 
     return (
         <div>
@@ -39,14 +35,13 @@ function AdminLogin() {
                         </tr>
                         <tr>
                             <td></td>
-                            <td><button type="button" onClick={handleLoginButton}>Login</button></td>
+                            <td>
+                                <button type="button" onClick={handleLoginButton}>Login</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
-                {isLoggedIn && <AdminHome />} {/* Render AdminHome if logged in */}
-                <nav>
-                    <Outlet />
-                </nav>
+                <Outlet />
             </center>
         </div>
     );
