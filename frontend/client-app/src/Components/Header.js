@@ -25,18 +25,38 @@ function Header() {
                                 State University of Madhya Pradesh, India
                             </p>
                             <div className="reg-login">
-                                
-                            <Router>
-                {/* <Link to="alumniregister">Register</Link>
-                <span>   </span>::<span>   </span>
-                <Link to="alumnilogin">Login</Link> */}
-                
-                {/* <Routes>
-                    <Route path="alumniregister" element={<AlumniRegister />} />
-                    <Route path="alumnilogin" element={<AlumniLogin />} />
-                </Routes> */}
-            </Router>
+// <<<<<<< main
+//                             {/* <a className="reg-login" href="#"> */}
 
+//                                 <Router>
+//                                     <Link to="alumniregister">Register</Link>
+//                                     <span> :: </span>
+//                                     <Link to="alumnilogin">Login</Link>
+                                    
+//                                     <Routes>
+//                                         <Route path="alumniregister" element={<AlumniRegister />}>
+//                                             <Route path="mainpage" element={<MainPage />} />
+//                                         </Route>
+//                                         <Route path="alumnilogin" element={<AlumniLogin />}></Route>
+//                                     </Routes>
+//                                 </Router>
+//                                 {/* Register::Login */}
+                            
+//                             {/* </a> */}
+// =======
+                                
+//                             <Router>
+//                 {/* <Link to="alumniregister">Register</Link>
+//                 <span>   </span>::<span>   </span>
+//                 <Link to="alumnilogin">Login</Link> */}
+                
+//                 {/* <Routes>
+//                     <Route path="alumniregister" element={<AlumniRegister />} />
+//                     <Route path="alumnilogin" element={<AlumniLogin />} />
+//                 </Routes> */}
+//             </Router>
+
+// >>>>>>> main
                             </div>
                         </div>
                     </div>
