@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Routes, Outlet } from "react-router-dom";
 import "./MainPage_trial.css";

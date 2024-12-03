@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Link, Route, Routes, Outlet } from "react-router-dom";
-import davvLogo from "./davv-logo.svg";
+// import logo from "./davv-logo.svg";
+import logo from "./davv-logo.svg";
 import "./Header.css";
 import AlumniRegister from "../Forms/AlumniRegister";
 import AlumniLogin from "../Forms/AlumniLogin";
@@ -12,7 +13,7 @@ function Header() {
                 <div className="header-content">
                     <div className="logo-container">
                         <img
-                            src={davvLogo}
+                            src={logo}
                             alt="Devi Ahilya Vishwavidyalaya Logo"
                             className="logo"
                         />

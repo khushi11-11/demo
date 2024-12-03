@@ -4,9 +4,11 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Link, Route, Routes, Outlet } from "react-router-dom";
 import ReactDOM from "react-dom/client"; 
 import Bill from "../AlumniView/Bill";
-import MainPage from "../Components/MainPage";
+// import MainPage from "../Components/MainPage";
 import GetInvolved from "../Components/GetInvolved";
 import AlumniRegister from "./AlumniRegister";
+// import Home from "../Components/Home";
+import MainPage_trial from "../Components/MainPage_trial";
 
 function AlumniLogin() {
     const [aid, setAId] = useState("");
@@ -54,7 +56,7 @@ function AlumniLogin() {
                     aid: res.data.Aid
                 };
                 // alert(alumniData.aid);
-                root.render(<GetInvolved data={alumniData} />);
+                root.render(<MainPage_trial data={alumniData} />);
             } else {
                 alert("Invalid Alumni ID or Password");
             }
