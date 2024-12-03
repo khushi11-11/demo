@@ -3,7 +3,7 @@ import "./AboutUs.css"
 function AboutUs() {
     return (
         <div className="text">
-            <h2>About Us</h2>
+            <h1>About Us</h1>
             <p>
                 The DAVV Alumni Association is more than just a network — it’s a family built on shared memories, friendships, and a commitment to excellence. We believe in the power of connections, where alumni from diverse backgrounds come together to inspire and support one another. Whether it’s through professional development opportunities, reunions, or collaborative projects, our goal is to create a platform that fosters growth and belonging.
 

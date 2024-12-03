@@ -22,7 +22,7 @@ function AdminLogin() {
     return (
         <div>
             <center>
-                <h4>Administrator Login</h4>
+                <h1>Administrator Login</h1>
                 <table>
                     <tbody>
                         <tr>
