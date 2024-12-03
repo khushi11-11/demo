@@ -1,14 +1,9 @@
 import axios from "axios";
 import Cookies from 'js-cookie';
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Link, Route, Routes, Outlet } from "react-router-dom";
-import ReactDOM from "react-dom/client"; 
-import Bill from "../AlumniView/Bill";
-// import MainPage from "../Components/MainPage";
-import GetInvolved from "../Components/GetInvolved";
-import AlumniRegister from "./AlumniRegister";
-// import Home from "../Components/Home";
+import ReactDOM from "react-dom/client";
 import MainPage_trial from "../Components/MainPage_trial";
+import "./AlumniLogin.css";
 
 function AlumniLogin() {
     const [aid, setAId] = useState("");
@@ -38,16 +33,12 @@ function AlumniLogin() {
         };
         axios.post('http://localhost:7777/alumni/login', obj).then((res) => {
             if (res.data && res.data.Aid) {
-            // obj ka rhs
-                // Cookies handling
                 if (ischecked) {
                     const alumniData = {
                         ID: aid,
                         Passwd: apass
                     };
                 }
-
-
                 // Render Bill
                 const root = ReactDOM.createRoot(document.getElementById("root")); // Use createRoot
                 const alumniData = {
@@ -68,7 +59,7 @@ function AlumniLogin() {
     };
 
     return (
-        <div>
+        <div className="alumnilogin">
             <center>
                 <h3>Alumni Login</h3>
                 <table>
@@ -87,7 +78,7 @@ function AlumniLogin() {
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="checkbox" onChange={handleRemember} checked={ischecked}/><span>Remember Me</span></td>
+                            <td><input type="checkbox" onChange={handleRemember} checked={ischecked} /><span>Remember Me</span></td>
                         </tr>
                     </tbody>
                 </table>

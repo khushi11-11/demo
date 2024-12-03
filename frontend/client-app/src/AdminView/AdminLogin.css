@@ -1,0 +1,10 @@
+.admin-login-form {
+  margin: 0 auto;
+}
+.admin-login-form h1 {
+  margin-top: 15px;
+}
+.input {
+  border: none;
+  outline: none;
+}

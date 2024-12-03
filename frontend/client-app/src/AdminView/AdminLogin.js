@@ -1,7 +1,6 @@
-
-
 import React, { useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
+import "./AdminLogin.css";
 
 function AdminLogin() {
     const [uid, setUId] = useState("");
@@ -20,29 +19,27 @@ function AdminLogin() {
     };
 
     return (
-        <div>
-            <center>
-                <h1>Administrator Login</h1>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>User ID</td>
-                            <td><input type="text" onChange={handleUIdText} /></td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td><input type="password" onChange={handleUPassText} /></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <button type="button" onClick={handleLoginButton}>Login</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <Outlet />
-            </center>
+        <div className="admin-login-form">
+            <h1>Administrator Login</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>User ID</td>
+                        <td className="input"><input type="text" onChange={handleUIdText} /></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" onChange={handleUPassText} /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" onClick={handleLoginButton}>Login</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <Outlet />
         </div>
     );
 }
