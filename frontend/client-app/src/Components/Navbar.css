@@ -13,6 +13,7 @@
   border-radius: 6px;
   margin-left: 2px;
 }
+
 .links {
   list-style-type: none;
   margin-top: 12px;
@@ -30,7 +31,6 @@
   &:hover {
     color: #b55829;
     text-decoration: underline;
-    font-size: 22px;
   }
 }
 .forms {
@@ -42,20 +42,3 @@
 .left-div li {
   margin-top: 16px;
 }
-
-/* @media (max-width: 768px) {
-    .navbar {
-      width: 100%; 
-      height: auto; 
-      border-radius: 0; 
-      padding: 15px; 
-    }
-  
-    .links a {
-      font-size: 14px; 
-    }
-  
-    #register-login {
-      font-size: 14px; 
-    }
-  } */
