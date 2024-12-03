@@ -1,0 +1,9 @@
+.alumnilogin {
+  margin: 0 auto;
+}
+.alumnilogin h3 {
+  margin-top: 10px;
+}
+.alumnilogin button{
+    align-self: left;
+}
