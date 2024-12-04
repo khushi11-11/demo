@@ -1,15 +1,25 @@
-.text h2 {
-  font-size: 36px;
-  margin-top: 10px;
+.text {
+  padding: 8px;
+  margin-left: 10px;
 }
-.text p{
-    font-size: 18px;
+.text h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.text h2 {
+  font-size: 30px;
+}
+.text p {
+  margin-left: 10px;
+  font-size: 18px;
+  line-height: 30px;
 }
 .second-para {
+  line-height: 30px;
   margin-top: 10px;
-  margin-left: 10px;
-  line-height: normal;
 }
 .second-para ul {
+  list-style-type: none;
   font-size: 18px;
+  margin-top: 10px;
 }

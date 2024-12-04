@@ -27,11 +27,6 @@ function AboutUs() {
                         Adapting environment friendly and energy efficient best practices for sustainable development.</li>
                     <li>Addressing issues and priorities for empowering local community with a global perspective.</li>
                 </ul>
-
-
-
-
-
             </p>
         </div>
     )
