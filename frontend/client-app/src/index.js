@@ -28,14 +28,13 @@ import AlumniTrack from './AdminView/AlumniTrack';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-// 
+  // 
 
   // <NavRoute/>
   // <MainPage />
   <MainPage_trial />
   // <BrowserRouter>
   // <AdminLogin />
-  // <Home/>
   // <AlumniRegister/>
 );
 

@@ -1,0 +1,12 @@
+.contacts {
+  margin: 0 auto;
+}
+.contacts h3 {
+  margin-top: 15px;
+  text-align: left;
+  font-size: 20px;
+}
+.contacts p {
+  margin-top: 10px;
+  text-align: left;
+}

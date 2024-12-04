@@ -128,16 +128,16 @@ p {
   border-radius: 100%;
   margin-left: 45px;
 }
-.text h2 {
-  font-size: 20px;
+.message .text h2 {
+  font-size: 24px;
 }
-.text p {
+.message .text p {
   margin-top: 20px;
   font-size: 1rem;
   font-weight: 300;
   opacity: 0.85;
 }
-.text h3 {
+.message .text h3 {
   margin-top: 15px;
   font-size: 1rem;
   font-weight: 300;
